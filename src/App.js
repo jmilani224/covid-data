@@ -4,12 +4,12 @@ import Main from './components/main.js'
 import './App.css';
 
 function App() {
-  const [state, setState] = useState('oh')
+  const [state, setState] = useState(['oh', 'ca', 'nd', 'sd', 'or'])
 
   return (
       
       <Main>
-      <Chart state={state} />
+        {state.map(i => <Chart state={i} />)}
       </Main>
   );
 }

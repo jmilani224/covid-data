@@ -34,6 +34,12 @@ code {
   animation: donut-spin 1.2s linear infinite;
 }
 
-.main {
+.highlighted-stat {
+  width: 10rem;
+  height: 8rem;
 }
 
+.chartH2 {
+  color: #fff;
+  text-align: center;
+}
