@@ -27,19 +27,73 @@ code {
 .spinner {
   display: inline-block;
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: var(--main-accent-color);
+  border-left-color: var( --light-blue);
   border-radius: 50%;
   width: 30px;
   height: 30px;
   animation: donut-spin 1.2s linear infinite;
 }
 
-.highlighted-stat {
-  width: 10rem;
+.highlightedStat {
+  width: 11rem;
   height: 8rem;
+  border: 1px solid var(--light-blue);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .chartH2 {
   color: #fff;
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.arrowIcon {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.4rem;
+}
+
+.highlightedStat h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  margin-top: 0;
+}
+
+.highlightedStat p {
+  color: var(--light-blue);
+  text-align: center;
+  margin: 0.4rem;
+}
+
+.chart {
+  margin-left: 19rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cards {
+  margin: 1rem 3rem 3rem 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sideBarContainer {
+  width: 18rem;
+  height: 100vh;
+  border-right: 1px solid var(--light-blue);
+  position: fixed;
+  top: 0;
+}
+
+.sideBarContainer h1 {
+  color: #fff;
+  margin: 1rem 0 0.4rem 1rem;
+  font-size: 3rem;
 }

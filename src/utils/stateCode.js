@@ -1,4 +1,4 @@
-const stateCodes = {
+export const stateCodes = {
 AZ: 'Arizona',
 AL: 'Alabama',
 AK: 'Alaska',
@@ -50,6 +50,12 @@ WA: 'Washington',
 WV: 'West Virginia',
 WI: 'Wisconsin',
 WY: 'Wyoming',
+}
+
+export const stateArr =[];
+
+for (const i in stateCodes) {
+    stateArr.push(stateCodes[i])
 }
 
 export const stateCodeHandler = code => stateCodes[code];
