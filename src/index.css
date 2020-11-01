@@ -139,3 +139,23 @@ code {
   font-size: 0.8rem;
   text-align: center;
 }
+
+.stateList {
+  margin-top: 1rem;
+}
+
+.stateListItem {
+  display: flex;
+  align-items: center;
+  color: var(--light-blue);
+  padding-top: 0.5rem;
+}
+
+.stateListItem p {
+  margin: 0;
+}
+
+.xIconContainer {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}

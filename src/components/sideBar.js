@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { stateArr } from '../utils/stateCode.js'
-import { stateCodes } from '../utils/stateCode.js'
+import { stateCodes, stateCodeHandler } from '../utils/stateCode.js'
+import { RiCloseCircleFill } from 'react-icons/ri'
 
 const SideBar = ({ states, setStates }) => {
 
@@ -30,7 +31,7 @@ const SideBar = ({ states, setStates }) => {
             }
         }
     }
-    console.log(stateDupValidation)
+
     return (
         <div className="sideBarContainer">
             <h1>COVID-19 State Stats</h1>
@@ -46,13 +47,16 @@ const SideBar = ({ states, setStates }) => {
                     setStateDupValidation(true)
                     setStateSelection(e.target.value)
                 }}
+                onClick={e => e.target.value = null}
                 />
                 <datalist id="states">
                     {stateArr.map(i => <option value={i} />)}
                 </datalist>
                 <button onClick={addState}>Add State</button>
                 {!stateValidation && <ErrorMessage text="Please Enter a Valid State" />}
-                {!stateDupValidation && <ErrorMessage text={`You've already selected ${stateSelection}.`} />}
+                {!stateDupValidation && <ErrorMessage text={`You've already added ${stateSelection}.`} />}
+
+                <StateList states={states} setStates={setStates} />
             </div>
         </div>
     )
@@ -61,3 +65,30 @@ const SideBar = ({ states, setStates }) => {
 export default SideBar;
 
 const ErrorMessage = ({ text }) => <p className='error'>{text}</p>
+
+const StateList = ({ states, setStates }) => {
+
+    return (
+        <div className='stateList'>
+            {states.map((i) =>
+            <StateListItem
+            state={i}
+            states={states}
+            setStates={setStates}
+            />)}
+        </div>
+    )
+}
+
+const StateListItem = ({ state, states, setStates }) => {
+    return (
+        <div className='stateListItem'>
+            <RiCloseCircleFill
+            className='xIconContainer'
+            color='#fd622d'
+            onClick={() => setStates(states.filter(i => i !== state))}
+            />
+            <p>{stateCodeHandler(state.toUpperCase())}</p>
+        </div>
+    )
+}
