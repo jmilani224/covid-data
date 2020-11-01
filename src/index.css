@@ -7,6 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   --dark-blue: #081834;
   --light-blue: #1553b6;
+  --green: #22c1c3;
+  --red: #fd622d;
   background-color: var(--dark-blue);
 
 }
@@ -90,10 +92,50 @@ code {
   border-right: 1px solid var(--light-blue);
   position: fixed;
   top: 0;
+  margin-left: 1rem;
+
 }
 
 .sideBarContainer h1 {
   color: #fff;
-  margin: 1rem 0 0.4rem 1rem;
+  margin: 1rem 0 2rem 0rem;
   font-size: 3rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.stateInput {
+  border: 1px solid var(--light-blue);
+  background-color: transparent;
+  padding: 1rem;
+  color: var(--light-blue);
+  text-align: center;
+  margin: 1rem 1rem 1rem 0;
+  font-size: 1rem;
+}
+
+.stateInput::placeholder {
+  color: var(--light-blue);
+}
+
+.inputContainer button {
+  border: 1px solid var(--light-blue);
+  background-color: var(--light-blue);
+  padding: 1rem;
+  color: var(--dark-blue);
+  text-align: center;
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.error {
+  color: var(--red);
+  margin: 0.2rem 0;
+  font-size: 0.8rem;
+  text-align: center;
 }

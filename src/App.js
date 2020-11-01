@@ -13,13 +13,13 @@ export const theme = {
 }
 
 function App() {
-  const [state, setState] = useState(['oh', 'nj', 'ny', 'ca', 'nd', 'sd', 'or'])
+  const [states, setStates] = useState(['oh'])
 
   return (
       
       <Main>
-        <SideBar setState={setState} />
-        {state.map(i => <Chart state={i} />)}
+        <SideBar states={states} setStates={setStates} />
+        {states.map(i => <Chart states={i} />)}
       </Main>
   );
 }

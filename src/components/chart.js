@@ -9,23 +9,23 @@ import { theme } from '../App.js'
 
 // inspo: https://dribbble.com/shots/2068645-Red-Points-App-Activity/attachments/2068645-Red-Points-App-Activity?mode=media
 
-const Chart = ({ state }) => {
+const Chart = ({ states }) => {
 
     const [fetchData, setFetchData] = useState({
         loading: true,
         data: null,
     })
     useEffect(() => {
-        fetch(`https://api.covidtracking.com/v1/states/${state}/daily.json`)
+        fetch(`https://api.covidtracking.com/v1/states/${states}/daily.json`)
         .then(response => response.json())
         .then(data => setFetchData({
             loading: false,
             data: data,
         }));
-    }, [])
+    }, [states])
 
 const data = fetchData.data
-if (!data) return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '60vw'}}><div className='spinner' style={{marginTop: '20rem'}} /></div>;
+if (!data) return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}><div className='spinner' style={{marginTop: '20rem', marginLeft: '20rem'}} /></div>;
 
 const dataSanitized = data.map(i => ({
   ...i,
@@ -44,7 +44,7 @@ const activeDotStyles = {
     return (
       <>
       <div className='chart'>
-        <h2 className='chartH2'>{stateCodeHandler(state.toUpperCase())}</h2>
+        <h2 className='chartH2'>{stateCodeHandler(states.toUpperCase())}</h2>
         <ResponsiveContainer width="100%" height={400}>
           <LineChart
             data={dataSanitized}
@@ -119,7 +119,7 @@ const activeDotStyles = {
         <HighlightedStat data={dataSanitized} stat="hospitalizedIncrease" statName="New Hospitalizations"/>
         <HighlightedStat data={dataSanitized} stat="deathIncrease" statName="New Deaths" />
       </div>
-      </div>
+    </div>
           </>
     )
 
