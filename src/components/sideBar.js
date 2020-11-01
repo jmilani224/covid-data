@@ -9,7 +9,8 @@ const SideBar = ({ states, setStates }) => {
     const [stateValidation, setStateValidation] = useState(true);
     const [stateDupValidation, setStateDupValidation] = useState(true);
 
-    const addState = () => {
+    const addState = e => {
+        e.preventDefault();
         setStateDupValidation(true);
         for (const i in stateCodes) {
             if (stateCodes[i] === stateSelection) {
@@ -36,25 +37,27 @@ const SideBar = ({ states, setStates }) => {
         <div className="sideBarContainer">
             <h1>COVID-19 State Stats</h1>
             <div className="inputContainer">
-                <input
-                className="stateInput"
-                list="states"
-                id="state-selector"
-                name="state-selector"
-                placeholder="Enter a State"
-                onChange={e => {
-                    setStateValidation(true)
-                    setStateDupValidation(true)
-                    setStateSelection(e.target.value)
-                }}
-                onClick={e => e.target.value = null}
-                />
-                <datalist id="states">
-                    {stateArr.map(i => <option value={i} />)}
-                </datalist>
-                <button onClick={addState}>Add State</button>
-                {!stateValidation && <ErrorMessage text="Please Enter a Valid State" />}
-                {!stateDupValidation && <ErrorMessage text={`You've already added ${stateSelection}.`} />}
+                <form>
+                    <input
+                    className="stateInput"
+                    list="states"
+                    id="state-selector"
+                    name="state-selector"
+                    placeholder="Enter a State Here"
+                    onChange={e => {
+                        setStateValidation(true)
+                        setStateDupValidation(true)
+                        setStateSelection(e.target.value)
+                    }}
+                    onClick={e => e.target.value = null}
+                    />
+                    <datalist id="states">
+                        {stateArr.map(i => <option value={i} />)}
+                    </datalist>
+                    <input className="submitButton" type="submit" onClick={addState} value="Add State" />
+                    {!stateValidation && <ErrorMessage text="Please Enter a Valid State" />}
+                    {!stateDupValidation && <ErrorMessage text={`You've already added ${stateSelection}.`} />}
+                </form>
 
                 <StateList states={states} setStates={setStates} />
             </div>

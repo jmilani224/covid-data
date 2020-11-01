@@ -92,7 +92,7 @@ code {
   border-right: 1px solid var(--light-blue);
   position: fixed;
   top: 0;
-  margin-left: 1rem;
+  margin: 0 1rem;
 
 }
 
@@ -105,12 +105,15 @@ code {
 .inputContainer {
   display: flex;
   flex-direction: column;
+  width: 13rem;
 }
 
 .stateInput {
+  width: 100%;
+  width: 13rem;
   border: 1px solid var(--light-blue);
   background-color: transparent;
-  padding: 1rem;
+  padding: 1rem 0;
   color: var(--light-blue);
   text-align: center;
   margin: 1rem 1rem 1rem 0;
@@ -121,13 +124,13 @@ code {
   color: var(--light-blue);
 }
 
-.inputContainer button {
+.submitButton {
+  width: 100%;
   border: 1px solid var(--light-blue);
   background-color: var(--light-blue);
-  padding: 1rem;
+  padding: 1rem 0;
   color: var(--dark-blue);
   text-align: center;
-  margin-right: 1rem;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
