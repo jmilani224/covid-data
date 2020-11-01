@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Chart from './components/chart.js'
 import Main from './components/main.js'
-import Sidebar from './components/sideBar.js'
 import './App.css';
 import SideBar from './components/sideBar.js';
 
