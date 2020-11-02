@@ -35,7 +35,7 @@ const SideBar = ({ states, setStates }) => {
 
     return (
         <div className="sideBarContainer">
-            <h1>COVID-19 State Stats</h1>
+            <h1>COVID-19 <span className='smallerH1Font'>State Stats</span></h1>
             <div className="inputContainer">
                 <form>
                     <input
@@ -54,8 +54,13 @@ const SideBar = ({ states, setStates }) => {
                     <datalist id="states">
                         {stateArr.map(i => <option value={i} />)}
                     </datalist>
-                    <input className="submitButton" type="submit" onClick={addState} value="Add State" />
-                    {!stateValidation && <ErrorMessage text="Please Enter a Valid State" />}
+                    <input
+                    className="submitButton"
+                    type="submit"
+                    onClick={addState}
+                    value="Add State"
+                    />
+                    {!stateValidation && <ErrorMessage text="Please enter a valid state." />}
                     {!stateDupValidation && <ErrorMessage text={`You've already added ${stateSelection}.`} />}
                 </form>
 
