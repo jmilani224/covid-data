@@ -63,20 +63,6 @@ const activeDotStyles = {
             <Legend wrapperStyle={{ color: theme.color.lightBlue }} />
 
             <defs>
-              <linearGradient id="gradient1" gradientTransform="rotate(90)">
-                <stop offset="20%" stop-color="gold" />
-                <stop offset="90%" stop-color="red" />
-              </linearGradient>
-            </defs>
-
-            <defs>
-              <linearGradient id="gradient2" gradientTransform="rotate(90)">
-                <stop offset="0%" stop-color="#fdbb2d" />
-                <stop offset="100%" stop-color="#22c1c3" />
-              </linearGradient>
-            </defs>
-
-            <defs>
               <linearGradient id="gradientHeat" gradientTransform="rotate(90)">
                 <stop offset="0%" stop-color="#fd622d" />
                 <stop offset="33%" stop-color="#fdbb2d" />
@@ -84,7 +70,6 @@ const activeDotStyles = {
                 <stop offset="100%" stop-color="#227ec3" />
               </linearGradient>
             </defs>
-
 
             <Line
             dot={false}
