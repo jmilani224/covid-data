@@ -100,9 +100,21 @@ const activeDotStyles = {
 
         </ResponsiveContainer>
       <div className='cards'>
-        <HighlightedStat data={dataSanitized} stat="positiveIncrease" statName="New Cases" />
-        <HighlightedStat data={dataSanitized} stat="hospitalizedIncrease" statName="New Hospitalizations"/>
-        <HighlightedStat data={dataSanitized} stat="deathIncrease" statName="New Deaths" />
+        <HighlightedStat
+        data={dataSanitized}
+        stat="positiveIncrease"
+        statName="New Cases"
+        />
+        <HighlightedStat
+        data={dataSanitized}
+        stat="hospitalizedIncrease"
+        statName="New Hospitalizations"
+        />
+        <HighlightedStat
+        data={dataSanitized}
+        stat="deathIncrease"
+        statName="New Deaths"
+        />
       </div>
     </div>
           </>

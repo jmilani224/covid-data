@@ -39,7 +39,7 @@ const SideBar = ({ states, setStates }) => {
             <div className="inputContainer">
                 <form>
                     <input
-                    className="stateInput"
+                    className="stateInput inputStyle"
                     list="states"
                     id="state-selector"
                     name="state-selector"
@@ -55,7 +55,7 @@ const SideBar = ({ states, setStates }) => {
                         {stateArr.map(i => <option value={i} />)}
                     </datalist>
                     <input
-                    className="submitButton"
+                    className="submitButton inputStyle"
                     type="submit"
                     onClick={addState}
                     value="Add State"
