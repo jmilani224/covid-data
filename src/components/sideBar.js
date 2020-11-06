@@ -35,7 +35,7 @@ const SideBar = ({ states, setStates }) => {
 
     return (
         <div className="sideBarContainer">
-            <h1>COVID-19 <span className='smallerH1Font'>State Stats</span></h1>
+            <h1>COVID-19 <br /><span className='smallerH1Font'>State Stats</span></h1>
             <div className="inputContainer">
                 <form>
                     <input
