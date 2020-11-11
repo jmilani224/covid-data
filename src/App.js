@@ -3,6 +3,7 @@ import Chart from './components/chart.js'
 import Main from './components/main.js'
 import './App.css';
 import SideBar from './components/sideBar.js';
+import Empty from './components/empty.js'
 
 export const theme = {
   color: {
@@ -19,6 +20,7 @@ function App() {
       <Main>
         <SideBar states={states} setStates={setStates} />
         {states.map(i => <Chart states={i} />)}
+        {states.length === 0 && (<Empty />)}
       </Main>
   );
 }

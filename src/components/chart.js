@@ -117,7 +117,7 @@ const activeDotStyles = {
         />
       </div>
     </div>
-          </>
+    </>
     )
 
     };

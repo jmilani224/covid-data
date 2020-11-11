@@ -43,7 +43,7 @@ const SideBar = ({ states, setStates }) => {
                     list="states"
                     id="state-selector"
                     name="state-selector"
-                    placeholder="Enter a State Here"
+                    placeholder="Select a State"
                     onChange={e => {
                         setStateValidation(true)
                         setStateDupValidation(true)
@@ -58,7 +58,7 @@ const SideBar = ({ states, setStates }) => {
                     className="submitButton inputStyle"
                     type="submit"
                     onClick={addState}
-                    value="Add State"
+                    value="View Data"
                     />
                     {!stateValidation && <ErrorMessage text="Please enter a valid state." />}
                     {!stateDupValidation && <ErrorMessage text={`You've already added ${stateSelection}.`} />}

@@ -165,6 +165,13 @@ code {
   cursor: pointer;
 }
 
+.emptyMessage {
+  color: var(--light-blue);
+  align-self: center;
+  margin-top: 20rem;
+  font-size: 1.2rem;
+}
+
 
 @media only screen and (max-width: 800px) {
 
@@ -216,6 +223,10 @@ code {
     margin: 1rem 0.2rem 3rem 0.2rem;
     display: flex;
     justify-content: space-around;
+  }
+
+  .emptyMessage {
+    margin-top: 10rem;
   }
 
 }
