@@ -96,7 +96,7 @@ const StateListItem = ({ state, states, setStates }) => {
             color='#fd622d'
             onClick={() => setStates(states.filter(i => i !== state))}
             />
-            <p>{stateCodeHandler(state.toUpperCase())}</p>
+            <p><a href={`#${state}`}>{stateCodeHandler(state.toUpperCase())}</a></p>
         </div>
     )
 }

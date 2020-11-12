@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,7 +14,6 @@ body {
   --green: #22c1c3;
   --red: #fd622d;
   background-color: var(--dark-blue);
-
 }
 
 code {
@@ -154,6 +157,16 @@ code {
   align-items: center;
   color: var(--light-blue);
   padding-top: 0.5rem;
+  text-decoration: none;
+}
+
+.stateListItem a, .stateListItem a:visited, .stateListItem a:active {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+.stateListItem a:hover {
+  text-decoration: underline;
 }
 
 .stateListItem p {

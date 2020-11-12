@@ -19,7 +19,7 @@ function App() {
       
       <Main>
         <SideBar states={states} setStates={setStates} />
-        {states.map(i => <Chart states={i} />)}
+        {states.map(i => <Chart state={i} />)}
         {states.length === 0 && (<Empty />)}
       </Main>
   );
