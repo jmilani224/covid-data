@@ -25,7 +25,7 @@ const Chart = ({ state }) => {
     }, [state])
 
 const data = fetchData.data
-if (!data) return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}><div className='spinner' style={{marginTop: '20rem', marginLeft: '20rem'}} /></div>;
+if (fetchData.loading) return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}><div className='spinner' style={{marginTop: '20rem', marginLeft: '20rem'}} /></div>;
 
 const dataSanitized = data.map(i => ({
   ...i,
@@ -40,7 +40,6 @@ const activeDotStyles = {
   stroke: null,
   strokeWidth: 0
 }
-console.log({state})
     return (
       <>
       <div className='chart'>
